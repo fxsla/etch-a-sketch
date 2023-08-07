@@ -10,23 +10,32 @@ function createGrid(size){
         }
         container.appendChild(row)
     }
+    let gridBox = document.querySelectorAll(".row > .box")
+    
+
+    gridBox.forEach(singleBox => {
+        singleBox.addEventListener("mouseover", () => {
+        singleBox.classList.add("hover")
+        })
+    })
 }
 
 let container = document.querySelector(".container")
 let button = document.querySelector(".reset");
 
-
 button.addEventListener("click", () => {
-    let gridSizeInput = prompt("Please enter a grid size:");
+    let gridSizeInput = prompt("Please enter a grid size: (<=100)");
     if(gridSizeInput<=100) {
         let rows = document.querySelectorAll('.row')
+        
         rows.forEach((row) => {
             row.remove();
         })
         createGrid(gridSizeInput);
     }
-    
+
 })
+
 
 createGrid(16)
 
