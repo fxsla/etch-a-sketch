@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.container {
+    width:500px;
+    height:500px;
+    border:1px solid black;
+    display:flex;
+}
+.box {
+    border:1px solid black;
+    flex: 1;
+    
+}
+
+.row {
+    display:flex;
+    flex-direction: column;
+    flex:1;
+}
